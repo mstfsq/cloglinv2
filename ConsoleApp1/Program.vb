@@ -52,11 +52,11 @@ Tea-1.50")
         
         do 
         
-        if sProd1 = "Coffee" Then
-            tprice = tprice + 1.99
+        if sProd1 = "Coffee"  Then
+            tprice = tprice + 0.89
             
-       else if sprod1 = "Tea" then 
-        tprice = tprice + 1.99
+       else if sprod1 = "Tea"  then 
+        tprice = tprice + 1.30
 
            
             
@@ -74,39 +74,63 @@ Tea-1.50")
         
                 dim cash as Single
                 dim change as Single
-                dim Aowed as single
+                dim owed as single
                 dim rpay as single 
+                dim roundedChange as single
+        
+       
         Console.writeline("Please input cash you would like to pay")
         cash = console.ReadLine()
         
-        
+        dim owedAmount as single
+        dim pOwedAmount as single
+        dim secondPayment as single
         
         change = cash - tprice 
+        owedAmount = change * -1
+        
+        pOwedAmount = owedAmount
+        
+        
+        
+        
+        
         
         if change >= 0 Then
-            Console.WriteLine("Change is " & change )
+            Console.WriteLine("Change is " & Math.Round(change,2))
+        
+        
+        else if change < 0 Then
+            
+            
+            do
+            
+            
+           
+            Console.WriteLine("You owe " & Math.Round(Powedamount, 2))
+            
+            Console.WriteLine("How much more would you like to pay")
+            secondPayment = console.ReadLine()
+                
+                owedAmount= change + secondPayment
+                
+                pOwedAmount  = owedamount * -1
+                
+                
+                
+            loop until owedamount >= owedAmount
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         End If
-        
-        
-        
-        ' the change system
-        do while 0 > change 
-            aowed = change * -1
-            
-            Console.WriteLine("You owe " & aowed)
-            
-            Console.writeline("Please enter amount you would like to give")
-            rpay = console.ReadLine()
-            
-            change = aowed + rpay
-            
-            
-            
-            
-            
-            
-            
-        loop 
         
         Console.writeline("Thanks,Have a nice day")
         
