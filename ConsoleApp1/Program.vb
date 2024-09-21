@@ -107,9 +107,9 @@ Tea-1.50")
             
             
            
-            Console.WriteLine("You owe " & Math.Round(Powedamount, 2))
+            Console.WriteLine("You owe " & Math.Round(Powedamount, 2) + 0.01)
             
-            Console.WriteLine("How much more would you like to pay")
+            Console.WriteLine("Please pay" & Math.Round(Powedamount, 2) + 0.01) 
             secondPayment = console.ReadLine()
                 
                 owedAmount= change + secondPayment
@@ -118,7 +118,7 @@ Tea-1.50")
                 
                 
                 
-            loop until owedamount >= owedAmount
+            loop until Math.round(owedamount,2) >= 0
             
             
             
