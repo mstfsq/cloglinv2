@@ -56,7 +56,7 @@ Tea-1.50")
             tprice = tprice + 1.99
             
        else if sprod1 = "Tea" then 
-        tprice = tprice + 1.50
+        tprice = tprice + 1.99
 
            
             
@@ -69,14 +69,17 @@ Tea-1.50")
         loop while rpt = "yes"    
         
         Console.WriteLine("Your total price is " & tPrice )
-        Console.ReadLine()
         
+        
+        
+                dim cash as Single
+                dim change as Single
+                dim Aowed as single
+                dim rpay as single 
         Console.writeline("Please input cash you would like to pay")
+        cash = console.ReadLine()
         
-        dim cash as Single
-        dim change as Single
-        dim Aowed as single
-        dim rpay as single 
+        
         
         change = cash - tprice 
         
@@ -88,7 +91,7 @@ Tea-1.50")
         do while 0 > change 
             aowed = change * -1
             
-            Console.WriteLine("You owe" & aowed)
+            Console.WriteLine("You owe " & aowed)
             
             Console.writeline("Please enter amount you would like to give")
             rpay = console.ReadLine()
@@ -99,7 +102,7 @@ Tea-1.50")
             
         loop 
         
-        Console.writeline("Thanks")
+        Console.writeline("Thanks,Have a nice day")
         
         
         
