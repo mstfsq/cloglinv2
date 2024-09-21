@@ -88,6 +88,8 @@ Tea-1.50")
         End If
         
         
+        
+        ' the change system
         do while 0 > change 
             aowed = change * -1
             
@@ -97,6 +99,8 @@ Tea-1.50")
             rpay = console.ReadLine()
             
             change = aowed + rpay
+            
+            
             
             
             
